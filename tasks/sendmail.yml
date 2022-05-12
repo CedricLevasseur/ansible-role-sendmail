@@ -1,6 +1,6 @@
 ---
 - name: Install sendmail
-  apt:
+  package:
     name: sendmail
     state: present
   tags:
