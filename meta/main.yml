@@ -13,6 +13,9 @@ galaxy_info:
       versions:
         - stretch
         - buster
+    - name: EL
+      versions:
+        - 7
   galaxy_tags:
     - sendmail
 
