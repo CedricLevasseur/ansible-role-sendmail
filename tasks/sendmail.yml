@@ -16,8 +16,16 @@
       {% endfor %}
   tags:
     - configuration
+  regsiter: set_relay
   notify:
     - "restart sendmail"
+
+- name: compile config file
+  shell: "m4 sendmail.mc > sendmail.cf"
+  args:
+    chdir: /etc/mail/
+  when:
+    set_relay.changed==true
 
 - name: "flush handlers"
   meta: flush_handlers

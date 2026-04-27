@@ -1,0 +1,15 @@
+---
+- name: Install sendmail
+  package:
+    name: sendmail
+    state: present
+  tags:
+    - install
+
+- name: Install sendmail
+  package:
+    name: sendmail-cfg
+    state: present
+  tags:
+    - install
+  when: ansible_distribution == 'OracleLinux' or ansible_distribution == 'RedHat'
