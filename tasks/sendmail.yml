@@ -22,8 +22,6 @@
 
 - name: compile config file
   shell: "m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf"
-  when:
-    set_relay.changed==true
 
 - name: "flush handlers"
   meta: flush_handlers
