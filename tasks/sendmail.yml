@@ -16,7 +16,7 @@
       {% endfor %}
   tags:
     - configuration
-  regsiter: set_relay
+  register: set_relay
   notify:
     - "restart sendmail"
 
