@@ -17,11 +17,11 @@
   tags:
     - configuration
   register: set_relay
-  notify:
-    - "restart sendmail"
 
 - name: compile config file
   shell: "m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf"
+  notify:
+    - "restart sendmail"
 
 - name: "flush handlers"
   meta: flush_handlers
