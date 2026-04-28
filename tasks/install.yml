@@ -8,7 +8,7 @@
 
 - name: Install sendmail
   package:
-    name: sendmail-cfg
+    name: sendmail-cf
     state: present
   tags:
     - install
