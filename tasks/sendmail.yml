@@ -21,9 +21,7 @@
     - "restart sendmail"
 
 - name: compile config file
-  shell: "m4 sendmail.mc > sendmail.cf"
-  args:
-    chdir: /etc/mail/
+  shell: "m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf"
   when:
     set_relay.changed==true
 
